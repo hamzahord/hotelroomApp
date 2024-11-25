@@ -7,7 +7,7 @@ jest.setTimeout(30000);
 
 // Connect to a test database before running tests
 beforeAll(async () => {
-    const dbURI = secrets.MONGO_URI;
+    const dbURI = "mongodb+srv://hamzahord:F3pM1ugB8g30dA65@cluster0.bjpkj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
     await mongoose.connect(dbURI);
     await HotelRoom.deleteMany();
 });
