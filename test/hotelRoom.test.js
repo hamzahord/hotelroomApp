@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const app = require('../index'); // Import the Express app
 const HotelRoom = require('../models/HotelRoom'); // Import the HotelRoom model
 
+jest.setTimeout(30000);
 
 // Connect to a test database before running tests
 beforeAll(async () => {
-    const dbURI = "mongodb+srv://hamzahord:F3pM1ugB8g30dA65@cluster0.bjpkj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    const dbURI = secrets.MONGO_URI;
     await mongoose.connect(dbURI);
     await HotelRoom.deleteMany();
 });

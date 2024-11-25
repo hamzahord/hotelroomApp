@@ -24,7 +24,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t hotelroomapp:latest .
-          docker tag hotelroomapp:latest <your-dockerhub-username>/hotelroomapp:latest
+          docker tag hotelroomapp:latest hamzahord/hotelroomapp:latest
 
       - name: Push Docker image
-        run: docker push <your-dockerhub-username>/hotelroomapp:latest
+        run: docker push hamzahord/hotelroomapp:latest
